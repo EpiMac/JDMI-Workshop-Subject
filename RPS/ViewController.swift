@@ -9,77 +9,69 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var ResultLabel: UILabel!
-    @IBOutlet weak var computerChoiceLabel: UILabel!
+    
+    var isClicked = false
     var playerChoice = -1
     var computerChoice = -1
     
-    @IBOutlet weak var ciseauButton: UIButton!
-    @IBOutlet weak var papierButton: UIButton!
-    @IBOutlet weak var pierreButton: UIButton!
+    @IBOutlet weak var scissorsButton: UIButton!
+    @IBOutlet weak var rockButton: UIButton!
+    @IBOutlet weak var paperButton: UIButton!
     
-    @IBAction func makeChoice(sender: AnyObject) {
-        switch (sender as! UIButton){
-        case pierreButton:
-            print("Pierre")
-            playerChoice = 0
-        case papierButton:
-            print("Papier")
-            playerChoice = 1
-        case ciseauButton:
-            print("Ciseau")
-            playerChoice = 2
-        default:
-            print("Nothing")
-        }
-        
-        computerChoice = computer()
-        finality(playerChoice, CC: computerChoice)
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    @IBOutlet weak var computerChoiceImage: UIImageView!
+
+    @IBAction func recommencerButton(sender: AnyObject) {
+        setup()
     }
     
-    func finality(PC: Int, CC: Int){
-        if ((PC == 0 && CC == 2)||(PC == 1 && CC == 0)||(PC == 2 && CC == 1)){
-            print("Gagné")
-            ResultLabel.text = "Gagné"
-        }
-        else {
-            if ((PC == 0 && CC == 1)||(PC == 1 && CC == 2)||(PC == 2 && CC == 0)){
-                print("Perdu")
-                ResultLabel.text = "Perdu"
+    @IBAction func makeChoice(sender: AnyObject) {
+        if (isClicked == false){
+            switch (sender as! UIButton){
+            case rockButton:
+                playerChoice = 0
+            case paperButton:
+                playerChoice = 1
+            case scissorsButton:
+                playerChoice = 2
+            default:
+                playerChoice = -1
             }
-            else {
-                print ("Égalité")
-                ResultLabel.text = "Égalité"
-            }
-        }
-        
-        switch CC {
-        case 0:
-            computerChoiceLabel.text = "Votre adversaire a joué : la pierre"
-        case 1:
-            computerChoiceLabel.text = "Votre adversaire a joué : la feuille"
-        case 2:
-            computerChoiceLabel.text = "Votre adversaire a joué : le ciseau"
-        default:
-            computerChoiceLabel.text = ""
+            computerChoice = computer()
+            finality(playerChoice, CC: computerChoice)
+            isClicked = true
         }
     }
     
     func setup(){
         playerChoice = -1
         computerChoice = -1
+        computerChoiceImage.image = nil
+        resultLabel.text = "VS"
+        isClicked = false
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func finality(PC: Int, CC: Int){
+        if ((PC == 0 && CC == 2)||(PC == 1 && CC == 0)||(PC == 2 && CC == 1)){
+            resultLabel.text = "Gagné"
+        }
+        else if ((PC == 0 && CC == 1)||(PC == 1 && CC == 2)||(PC == 2 && CC == 0)){
+            resultLabel.text = "Perdu"
+        }
+        else {
+            resultLabel.text = "Égalité"
+        }
+        switch CC {
+        case 0:
+            computerChoiceImage.image = UIImage(named: "Rock")
+        case 1:
+            computerChoiceImage.image = UIImage(named: "Paper")
+        case 2:
+            computerChoiceImage.image = UIImage(named: "Scissors")
+        default:
+            computerChoiceImage.image = nil
+        }
     }
     
     func computer()->Int {
@@ -87,18 +79,27 @@ class ViewController: UIViewController {
         let randomChoice = Int(arc4random_uniform(3))
         switch randomChoice{
         case 0:
-            print("Pierre")
             choice = 0
         case 1:
-            print("Papier")
             choice = 1
         case 2:
-            print("Ciseau")
             choice = 2
         default:
-            print("Nothing")
+            choice = -1
         }
         return choice
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 
