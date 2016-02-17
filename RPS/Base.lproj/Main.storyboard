@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RPS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6N-8h-cMn">
+                                <rect key="frame" x="10" y="120" width="580" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vtK-5Y-fAV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Pierre"/>
+                                <connections>
+                                    <action selector="makeChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NwJ-Tp-alo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-QI-19e">
+                                <rect key="frame" x="10" y="200" width="580" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="993-7K-chk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Papier"/>
+                                <connections>
+                                    <action selector="makeChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcV-dj-teQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whK-q7-zAz">
+                                <rect key="frame" x="10" y="280" width="580" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="idm-ps-EQ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Ciseaux"/>
+                                <connections>
+                                    <action selector="makeChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jtP-54-3c0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUk-cs-b1I">
+                                <rect key="frame" x="10" y="380" width="580" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cx7-o7-gR4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT3-PV-0y8">
+                                <rect key="frame" x="10" y="450" width="580" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fye-d1-5AP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="trailing" secondItem="p6N-8h-cMn" secondAttribute="trailing" id="3cM-M9-sut"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="top" secondItem="KUk-cs-b1I" secondAttribute="bottom" constant="10" id="BZG-m7-w11"/>
+                            <constraint firstItem="KUk-cs-b1I" firstAttribute="top" secondItem="whK-q7-zAz" secondAttribute="bottom" constant="40" id="DlZ-U0-BoV"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="trailing" secondItem="KUk-cs-b1I" secondAttribute="trailing" id="Ghd-6h-Al6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uT3-PV-0y8" secondAttribute="bottom" constant="120" id="HgJ-Nz-D9P"/>
+                            <constraint firstItem="sWT-QI-19e" firstAttribute="top" secondItem="p6N-8h-cMn" secondAttribute="bottom" constant="20" id="Www-yj-UDR"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="leading" secondItem="p6N-8h-cMn" secondAttribute="leading" id="YUw-zr-Dx7"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="trailing" secondItem="whK-q7-zAz" secondAttribute="trailing" id="Yyh-Kp-0nG"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="cuP-8i-T4h"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="leading" secondItem="whK-q7-zAz" secondAttribute="leading" id="eEt-DJ-jMa"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="leading" secondItem="sWT-QI-19e" secondAttribute="leading" id="kXP-5l-H1G"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="leading" secondItem="KUk-cs-b1I" secondAttribute="leading" id="mSV-yM-BUR"/>
+                            <constraint firstItem="whK-q7-zAz" firstAttribute="top" secondItem="sWT-QI-19e" secondAttribute="bottom" constant="20" id="pfQ-OS-qWp"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tCe-PK-1yf"/>
+                            <constraint firstItem="uT3-PV-0y8" firstAttribute="trailing" secondItem="sWT-QI-19e" secondAttribute="trailing" id="tz4-t4-o6a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ResultLabel" destination="KUk-cs-b1I" id="GGM-5c-Q6J"/>
+                        <outlet property="ciseauButton" destination="whK-q7-zAz" id="b7I-2S-mqq"/>
+                        <outlet property="computerChoiceLabel" destination="uT3-PV-0y8" id="wpO-la-5NU"/>
+                        <outlet property="papierButton" destination="sWT-QI-19e" id="Has-fw-2U0"/>
+                        <outlet property="pierreButton" destination="p6N-8h-cMn" id="0Zs-GT-uQ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="313"/>
         </scene>
     </scenes>
 </document>
