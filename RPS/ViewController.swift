@@ -53,14 +53,14 @@ class ViewController: UIViewController {
     }
     
     func finality(PC: Int, CC: Int){
-        if ((PC == 0 && CC == 2)||(PC == 1 && CC == 0)||(PC == 2 && CC == 1)){
+        if (PC == CC){
+            resultLabel.text = "Égalité"
+        }
+        else if ((PC == 0 && CC == 2)||(PC == 1 && CC == 0)||(PC == 2 && CC == 1)){
             resultLabel.text = "Gagné"
         }
-        else if ((PC == 0 && CC == 1)||(PC == 1 && CC == 2)||(PC == 2 && CC == 0)){
-            resultLabel.text = "Perdu"
-        }
         else {
-            resultLabel.text = "Égalité"
+            resultLabel.text = "Perdu"
         }
         switch CC {
         case 0:
@@ -75,19 +75,7 @@ class ViewController: UIViewController {
     }
     
     func computer()->Int {
-        var choice = -1
-        let randomChoice = Int(arc4random_uniform(3))
-        switch randomChoice{
-        case 0:
-            choice = 0
-        case 1:
-            choice = 1
-        case 2:
-            choice = 2
-        default:
-            choice = -1
-        }
-        return choice
+        return Int(arc4random_uniform(3))
     }
     
     override func viewDidLoad() {
