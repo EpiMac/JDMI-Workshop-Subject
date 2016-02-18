@@ -60,9 +60,21 @@
                                 <rect key="frame" x="0.0" y="258" width="320" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUk-cs-b1I">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <rect key="frame" x="75" y="0.0" width="170" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-RZ-YEw">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.074509803921568626" green="0.59215686274509804" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AsV-5I-5R1">
+                                        <rect key="frame" x="253" y="0.0" width="67" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.97254901960784312" green="0.66274509803921566" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -104,6 +116,8 @@
                         <outlet property="resultLabel" destination="KUk-cs-b1I" id="OWe-u0-TYo"/>
                         <outlet property="rockButton" destination="p6N-8h-cMn" id="Agu-9q-EIY"/>
                         <outlet property="scissorsButton" destination="whK-q7-zAz" id="yco-jl-V75"/>
+                        <outlet property="scoreComputerLabel" destination="AsV-5I-5R1" id="17n-eR-x5f"/>
+                        <outlet property="scorePlayerLabel" destination="sAl-RZ-YEw" id="roT-yf-ILD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

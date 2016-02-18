@@ -13,7 +13,11 @@ class ViewController: UIViewController {
     var isClicked = false
     var playerChoice = -1
     var computerChoice = -1
+    var scorePlayer = 0
+    var scoreComputer = 0
     
+    @IBOutlet weak var scorePlayerLabel: UILabel!
+    @IBOutlet weak var scoreComputerLabel: UILabel!
     @IBOutlet weak var scissorsButton: UIButton!
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
@@ -58,9 +62,12 @@ class ViewController: UIViewController {
         }
         else if ((PC == 0 && CC == 2)||(PC == 1 && CC == 0)||(PC == 2 && CC == 1)){
             resultLabel.text = "Gagné"
+            scorePlayerLabel.text = "\(scorePlayer++)"
+            
         }
         else {
             resultLabel.text = "Perdu"
+            scoreComputerLabel.text = "\(scoreComputer++)"
         }
         switch CC {
         case 0:
