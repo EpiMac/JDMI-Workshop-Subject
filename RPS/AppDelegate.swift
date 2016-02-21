@@ -1,9 +1,7 @@
 //
 //  AppDelegate.swift
 //  RPS
-//
-//  Created by Alexandre Toubiana on 16/02/2016.
-//  Copyright © 2016 Alexandre Toubiana. All rights reserved.
+//  Copyright © 2016 EpiMac. All rights reserved.
 //
 
 import UIKit
