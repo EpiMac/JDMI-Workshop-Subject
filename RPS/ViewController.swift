@@ -38,7 +38,9 @@ class ViewController: UIViewController
     // Fonction qui restaure les variables par default
     func setup()
     {
-        // FIXME
+        /* ----------- */
+        /* FIXME Setup */
+        /* ----------- */
     }
 
     // Fonction qui choisit un nombre aléatoire qui peut être 0, 1 ou 2.
@@ -52,14 +54,18 @@ class ViewController: UIViewController
     // Cette fonction permet de décider l'action du joueur.
     @IBAction func makeChoice(sender: AnyObject)
     {
-        // FIXME
+        /* ---------------- */
+        /* FIXME MakeChoice */
+        /* ---------------- */
     }
     
     // Fonction qui définit le résultat en fonction
     // du choix de l'ordinateur et du joueur.
     func finality(PC: Int, CC: Int)
     {
-        // FIXME
+        /* -------------- */
+        /* FIXME finality */
+        /* -------------- */
     }
     
 /* ============================================== */
