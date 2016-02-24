@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC46253E1C7D220A00B414B8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC46253D1C7D220A00B414B8 /* Launch Screen.xib */; };
+		AC4625421C7D2E7900B414B8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4625411C7D2E7900B414B8 /* Launch Screen.xib */; };
 		DA9CED151C73C12C00F8E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CED141C73C12C00F8E945 /* AppDelegate.swift */; };
 		DA9CED171C73C12C00F8E945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CED161C73C12C00F8E945 /* ViewController.swift */; };
 		DA9CED1A1C73C12C00F8E945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9CED181C73C12C00F8E945 /* Main.storyboard */; };
@@ -32,15 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AC46253D1C7D220A00B414B8 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		AC4625411C7D2E7900B414B8 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		DA9CED111C73C12C00F8E945 /* RPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9CED141C73C12C00F8E945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA9CED161C73C12C00F8E945 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA9CED191C73C12C00F8E945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA9CED1B1C73C12C00F8E945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA9CED201C73C12C00F8E945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA9CED251C73C12C00F8E945 /* RPSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA9CED301C73C12C00F8E945 /* RPSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9CED251C73C12C00F8E945 /* RPSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RPSTests.xctest; path = RPSTests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9CED301C73C12C00F8E945 /* RPSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RPSUITests.xctest; path = RPSUITests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 				DA9CED181C73C12C00F8E945 /* Main.storyboard */,
 				DA9CED1B1C73C12C00F8E945 /* Assets.xcassets */,
 				DA9CED201C73C12C00F8E945 /* Info.plist */,
-				AC46253D1C7D220A00B414B8 /* Launch Screen.xib */,
+				AC4625411C7D2E7900B414B8 /* Launch Screen.xib */,
 			);
 			path = RPS;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			files = (
 				DA9CED1C1C73C12C00F8E945 /* Assets.xcassets in Resources */,
 				DA9CED1A1C73C12C00F8E945 /* Main.storyboard in Resources */,
-				AC46253E1C7D220A00B414B8 /* Launch Screen.xib in Resources */,
+				AC4625421C7D2E7900B414B8 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -354,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -369,9 +369,8 @@
 				INFOPLIST_FILE = RPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextoub.RPS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.epimac.RPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -382,9 +381,8 @@
 				INFOPLIST_FILE = RPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextoub.RPS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.epimac.RPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -393,11 +391,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RPSTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextoub.RPSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos8.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPS.app/RPS";
 			};
 			name = Debug;
@@ -407,11 +403,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RPSTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextoub.RPSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos8.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPS.app/RPS";
 			};
 			name = Release;
@@ -420,7 +414,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = RPSUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextoub.RPSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,7 +426,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = RPSUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextoub.RPSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

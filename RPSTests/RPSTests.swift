@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import RPS
 
 class RPSTests: XCTestCase {
     
