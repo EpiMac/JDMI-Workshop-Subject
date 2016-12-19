@@ -168,6 +168,7 @@
 					DA9CED101C73C12B00F8E945 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = JA92XV498P;
+						LastSwiftMigration = 0810;
 					};
 					DA9CED241C73C12C00F8E945 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -371,6 +372,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epimac.RPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -383,6 +385,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epimac.RPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -29,7 +29,7 @@ class ViewController: UIViewController
 
     
     // Fonction appliquée au bouton "recommencer"
-    @IBAction func recommencerButton(sender: AnyObject)
+    @IBAction func recommencerButton(_ sender: AnyObject)
     {
         // Appel à la fonction setup
         setup()
@@ -52,7 +52,7 @@ class ViewController: UIViewController
     
     // Fonction associée aux trois boutons "Pierre/Feuille/Ciseaux"
     // Cette fonction permet de décider l'action du joueur.
-    @IBAction func makeChoice(sender: AnyObject)
+    @IBAction func makeChoice(_ sender: AnyObject)
     {
         /* ---------------- */
         /* FIXME MakeChoice */
@@ -61,7 +61,7 @@ class ViewController: UIViewController
     
     // Fonction qui définit le résultat en fonction
     // du choix de l'ordinateur et du joueur.
-    func finality(PC: Int, CC: Int)
+    func finality(_ PC: Int, CC: Int)
     {
         /* -------------- */
         /* FIXME finality */
