@@ -11,9 +11,10 @@ class ViewController: UIViewController
     // MARK: - Variables
     
     var playerChoice = -1
-    var computerChoiclkçe = -1
+    var computerChoice = -1
     var scorePlayer = 0
     var scoreComputer = 0
+    var constants = Constants()
     
     // MARK: - Outlets (Liens avec les objets du storyboard)
     
