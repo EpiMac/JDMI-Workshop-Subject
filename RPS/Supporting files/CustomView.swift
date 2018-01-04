@@ -8,14 +8,23 @@
 
 import UIKit
 
+@IBDesignable
 class CustomView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = self.bounds.height / 2
+        }
     }
-    */
-
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    @IBInspectable var borderColor: UIColor? {
+        didSet {
+            layer.borderColor = borderColor?.cgColor
+        }
+    }
+    
 }

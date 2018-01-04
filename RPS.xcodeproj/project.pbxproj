@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AC4625421C7D2E7900B414B8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4625411C7D2E7900B414B8 /* Launch Screen.xib */; };
+		DA2569951FFED7A5002D94D7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569941FFED7A5002D94D7 /* CustomView.swift */; };
+		DA2569971FFEE0E2002D94D7 /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2569961FFEE0E2002D94D7 /* ViewControllerExt.swift */; };
 		DA9CED151C73C12C00F8E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CED141C73C12C00F8E945 /* AppDelegate.swift */; };
 		DA9CED171C73C12C00F8E945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CED161C73C12C00F8E945 /* ViewController.swift */; };
 		DA9CED1A1C73C12C00F8E945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9CED181C73C12C00F8E945 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		AC4625411C7D2E7900B414B8 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		DA2569941FFED7A5002D94D7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		DA2569961FFEE0E2002D94D7 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		DA9CED111C73C12C00F8E945 /* RPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9CED141C73C12C00F8E945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA9CED161C73C12C00F8E945 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA2569931FFED6FC002D94D7 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				DA9CED141C73C12C00F8E945 /* AppDelegate.swift */,
+				DA9CED201C73C12C00F8E945 /* Info.plist */,
+				AC4625411C7D2E7900B414B8 /* Launch Screen.xib */,
+				DA2569941FFED7A5002D94D7 /* CustomView.swift */,
+				DA2569961FFEE0E2002D94D7 /* ViewControllerExt.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		DA9CED081C73C12B00F8E945 = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +105,10 @@
 		DA9CED131C73C12C00F8E945 /* RPS */ = {
 			isa = PBXGroup;
 			children = (
-				DA9CED141C73C12C00F8E945 /* AppDelegate.swift */,
+				DA2569931FFED6FC002D94D7 /* Supporting files */,
 				DA9CED161C73C12C00F8E945 /* ViewController.swift */,
 				DA9CED181C73C12C00F8E945 /* Main.storyboard */,
 				DA9CED1B1C73C12C00F8E945 /* Assets.xcassets */,
-				DA9CED201C73C12C00F8E945 /* Info.plist */,
-				AC4625411C7D2E7900B414B8 /* Launch Screen.xib */,
 			);
 			path = RPS;
 			sourceTree = "<group>";
@@ -234,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2569951FFED7A5002D94D7 /* CustomView.swift in Sources */,
 				DA9CED171C73C12C00F8E945 /* ViewController.swift in Sources */,
+				DA2569971FFEE0E2002D94D7 /* ViewControllerExt.swift in Sources */,
 				DA9CED151C73C12C00F8E945 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -355,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,8 +383,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RPS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				INFOPLIST_FILE = "$(SRCROOT)/RPS/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epimac.RPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,8 +396,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RPS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				INFOPLIST_FILE = "$(SRCROOT)/RPS/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epimac.RPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

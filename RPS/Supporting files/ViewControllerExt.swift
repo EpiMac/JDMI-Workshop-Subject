@@ -6,4 +6,12 @@
 //  Copyright © 2018 Alexandre Toubiana. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension ViewController {
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        setup()
+    }
+}

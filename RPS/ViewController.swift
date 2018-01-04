@@ -8,26 +8,26 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    // Variables globales.
+    // MARK: - Variables
     var playerChoice = -1
     var computerChoice = -1
     var scorePlayer = 0
     var scoreComputer = 0
     
-    // Liens avec les objets du story board.
+    // Liens avec les objets du storyboard.
     // Scores
     @IBOutlet weak var scorePlayerLabel: UILabel!
     @IBOutlet weak var scoreComputerLabel: UILabel!
     // Boutons
-    @IBOutlet weak var scissorsButton: UIButton!
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
+    @IBOutlet weak var scissorsButton: UIButton!
     // Resultat
     @IBOutlet weak var resultLabel: UILabel!
     // Choix de l'adversaire
-    @IBOutlet weak var computerChoiceImage: UIImageView!
-
+    @IBOutlet weak var computerChoiceLabel: UILabel!
     
+
     // Fonction appliquée au bouton "recommencer"
     @IBAction func recommencerButton(_ sender: AnyObject)
     {
@@ -66,21 +66,6 @@ class ViewController: UIViewController
         /* -------------- */
         /* FIXME finality */
         /* -------------- */
-    }
-    
-/* ============================================== */
-/*               DO NOT TOUCH IT !                */
-/* ============================================== */
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        setup()
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
     }
 }
 
