@@ -1,4 +1,4 @@
-# TP JDMI @epita
+# Workshop JI (TP Swift) @epita
 
 :warning: The subject is in French
 
